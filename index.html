@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Continual Learning VLA Models via Reinforcement Fine-Tuning.">
+  <meta name="keywords" content="Long-Lived Robots, Continual Learning, VLA Models, Reinforcement Fine-Tuning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Towards Long-Lived Robots: Continual Learning VLA Models via Reinforcement Fine-Tuning</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"">Continual
+              Learning VLA Models via
+              Reinforcement Fine-Tuning</h1>
+              <div class=" is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Yuan Liu</a><sup>1,2 †</sup>,</span>
+              <span class="author-block">
+                <a href="">Haoran Li</a><sup>2,3 ✉</sup>,</span>
+              <span class="author-block">
+                <a href="">Shuai Tian</a><sup>2,3</sup>,</span>  
+              <span class="author-block">
+                <a>Yuxing Qin</a><sup>2,3</sup>,</span>
+              <span class="author-block">
+                <a href="">Yuhui Chen</a><sup>2,3</sup>,</span>
+              <span class="author-block">
+                <a href="">Yupeng Zheng</a><sup>2,3</sup>,</span></br>
+              <span class="author-block">
+                <a href="">Yongzhen Huang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Dongbin Zhao</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>School of Artificial Intelligence, Beijing Normal University,
+              Beijing, China</span>
+            <span class="author-block"><sup>2</sup>Institute of Automation, Chinese Academy of Sciences (CASIA),
+              Beijing, China</span>
+            <span class="author-block"><sup>3</sup>School of Artificial Intelligence, University of Chinese Academy of
+              Sciences, Beijing, China</span>
+            <span class="author-block">†<sup></sup> Work done during an internship at CASIA&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block">✉<sup></sup> Corresponding author</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper (arXiv)</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (GitHub)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/PickBanana.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Task 1 — Pick Banana</p>
+          </div>
+          <div class="item">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/PickBread.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Task 2 — Pick Bread</p>
+          </div>
+          <div class="item">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/PullDrawer.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Task 3 — Pull Drawer</p>
+          </div>
+          <div class="item">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/HangChineseKnot.mp4" type="video/mp4">
+            </video>
+            <p class="video-caption">Task 4 — Hang Chinese Knot</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" style="padding-bottom: 1.5rem;">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <img src="./static/images/banner.png" class="mb-3"/>
+        <p>Pretrained on large-scale and diverse datasets, VLA models demonstrate strong generalization and
+          adaptability as general-purpose robotic policies.However, Supervised FineTuning (SFT), which serves as the
+          primary mechanism for adapting VLAs to
+          downstream domains, requires substantial amounts of task-specific data and is prone to catastrophic
+          forgetting.</p>
+        <p>To address these limitations, we propose LifeLong-RFT, a simple yet effective Reinforcement Fine-Tuning
+          (RFT) strategy for VLA models independent of online environmental feedback and pretrained reward models.
+          By integrating chunking-level on-policy reinforcement learning with the proposed Multi-Dimensional
+          Process Reward (MDPR) mechanism, LifeLong-RFT quantifies the heterogeneous contributions of intermediate
+          action chunks across three dimensions to facilitate policy optimization.</p>
+        <p>Specifically, (1) the Quantized Action Consistency Reward (QACR) ensures accurate action prediction
+          within the discrete action space; (2) the Continuous Trajectory Alignment Reward (CTAR) aligns decoded
+          continuous action chunks with reference trajectories to ensure precise control; (3) the Format Compliance
+          Reward (FCR) guarantees the structural validity of outputs.</p>
+        <p>Comprehensive experiments across SimplerEnv, LIBERO, and real-world tasks demonstrate that LifeLong-RFT
+          exhibits strong performance in multi-task learning. Furthermore, for continual learning on the LIBERO
+          benchmark, our method achieves a 22% gain in average
+          success rate over SFT, while effectively adapting to new tasks using only 20% of the training data.
+          Overall, our method provides a promising post-training paradigm for VLAs.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="content" style="margin-top: 0;">
+    <div class="container is-max-desktop">
+      <h2 style="margin-top: 0;">Method</h2>      
+      <img src="./static/images/method.png" />
+      <span class=" image-caption">
+        <center>Overview of the proposed LifeLong-RFT. This strategy integrates the chunking-level on-policy
+          reinforcement learning
+          algorithm with the Multi-Dimensional Process Reward mechanism to facilitate policy optimization.
+        </center>
+      </span><br />
+      <!-- <h2>Simulation Experiments</h2> -->
+    </div>
+<!-- 
+    <div class="columns is-multiline is-centered results-images"
+      style="gap:8px; justify-content:center; padding: 0; margin: 0;">
+      <div class="column is-half has-text-centered" style="padding: 0rem; margin: 0;">
+        <img src="./static/images/result1.png" alt="Result 1">
+      </div>
+    </div>
+    <p class="image-caption" style="text-align:center; width:100%; margin-top:0.1rem;">Multi-Task learning performance
+      on SimplerEnv.</p>
+
+    <div class="columns is-multiline is-centered results-images"
+      style="gap:8px; justify-content:center; padding: 0; margin: 0; margin-top: 1rem;">
+      <div class="column is-half has-text-centered" style="padding: 0rem; margin: 0;">
+        <img src="./static/images/Continual_learning_Libero.png" alt="Result 2" style="height: 100%;">
+      </div>
+    </div>
+    <p class="image-caption" style="text-align:center; width:100%; margin-top:0.5rem;">Continual learning performance on LIBERO.</p> -->
+
+    <div class="container is-max-desktop">
+      <h2 style="margin-top: 1rem;">Real-World Experiments</h2>
+    </div>
+
+    <div class="columns is-multiline is-centered results-images"
+      style="gap:8px; justify-content:center; padding: 0; margin: 0; margin-top: 1rem;">
+      <div class="column is-half has-text-centered" style="padding: 0rem; margin: 0;">
+        <img src="./static/images/real_world_multi_task_learning.png" alt="Real-World Multi-Task Results" style="height: 70%;">
+      </div>
+    </div>
+    <p class="image-caption" style="text-align:center; width:100%; margin-top:-5rem;">
+      Multi-Task learning performance on real-world tasks.
+    </p>
+
+  
+    <div class="columns is-multiline is-centered results-images"
+      style="gap:8px; justify-content:center; padding: 0; margin: 0; margin-top: 1rem;">
+      <div class="column is-half has-text-centered" style="padding: 0rem; margin: 0;">
+        <img src="./static/images/real_world_continual_learning.png" alt="Real-World Continual Results" style="height: 70%;">
+      </div>
+    </div>
+    <p class="image-caption" style="text-align:center; width:100%; margin-top:-3.5rem;">
+      Continual learning performance on real-world tasks.
+    </p>
+
+
+    <div class="container is-max-desktop">
+      <h2 style="margin-top: 1.5rem;">Adaptation Efficiency </h2>
+    </div>
+
+    <div class="columns is-multiline is-centered results-images"
+      style="gap:8px; justify-content:center; padding: 0; margin: 0; margin-top: 1rem;">
+      <div class="column is-half has-text-centered" style="padding: 0rem; margin: 0;">
+        <img src="./static/images/Efficiency.png" alt="Adaption Efficiency" style="height: 70%;">
+      </div>
+    </div>
+    <p class="image-caption" style="text-align:center; width:100%; margin-top:-11.5rem;">
+      Adaptation efficiency on representative new tasks.
+    </p>
+
+
+    <div class="container is-max-desktop">
+      <h2 style="margin-top: 1.5rem;">Cite our paper</h2>
+      <pre><code></code></pre>
+    </div>
+    
+    <footer class="footer">
+      <p>
+        <center>The website code was modified from the <a href="https://nerfies.github.io/">Nerfies</a>
+          project by <a href="https://pengpenglang.github.io/">pengpenglang</a>.
+        </center>
+      </p>
+    </footer>
+
+</body>
+
+</html>
