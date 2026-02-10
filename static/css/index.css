@@ -233,3 +233,12 @@ body {
   color: #444;
   font-weight: 600;
 }
+
+/* Ensure images inside results-images are centered */
+.results-images img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
